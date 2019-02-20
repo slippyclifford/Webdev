@@ -4,9 +4,9 @@ alert("Dr.Mario's silly clinic");
 var playername = prompt("What's your tag man");
 alert("Welcome to my silly virus clinic \n" +  playername);
     var inventory = {
-        yellowpills:1,
-        redpills:1,
-        bluepills:1,
+        yellowpills:0,
+        redpills:0,
+        bluepills:0,
     }
     
     
@@ -16,7 +16,7 @@ alert("Welcome to my silly virus clinic \n" +  playername);
    
     
     function Clinic(){
-        var room = prompt("You enter the clinic, nostrils flaring as you breathe in the shockingly sterile air. There is an air of unnerving hostility drifting through the room. The Dr. is lounging behind the counter, idly tossing pills into a glass jar. \n - Look \n - approach the doctor").toLowerCase();
+        var room = prompt("You enter the clinic, nostrils flaring as you breathe in the shockingly sterile air. There is an aura of unnerving hostility drifting through the room. The Dr. is lounging behind the counter, idly tossing pills into a glass jar. \n - Look \n - approach the doctor").toLowerCase();
       
 switch(room){
     
@@ -32,8 +32,11 @@ switch(room){
         else if(decide == "stop look"){
           var stoplook = alert("you stop looking")
             Clinic();
-        }
         
+        }
+        else{
+            alert(" Dr. Mario hated that.")
+        }
      break;
    
    
@@ -53,13 +56,15 @@ switch(room){
     }
        
    else if(take == "no"){
-   var run = prompt("The second your pill hits the floor, you know that your doom is sealed. His eyes light up with a hellish rage as his mouth curls into a snarl so hideous god above would cower in fear. n\ RUN").toLowerCase;
+   var run = prompt("The second your pill hits the floor, you know that your doom is sealed. His eyes light up with a hellish rage as his mouth curls into a snarl so hideous god above would cower in fear. \n RUN");
        
-        if(run == "okay"){
-           var takeoff = prompt("You take off at a desperate sprint, charging to the entrance with a wild abandon. However, as you look back you realize that the doctor has not strayed from his position behind the counter. Only then do you notice the vibrant blue capsule flying through the air. n\ dodge n\ catch ");
+       if(run == "run"){
+       Outside();
        }
+ }
+       
    
-       }
+       
         
         break;
         break;
@@ -69,6 +74,28 @@ switch(room){
         break;
  }
     
+    }
+    function Outside(){
+          var takeoff = prompt("Your fight or flight instinct kicks in and you take off at a desperate sprint out of the building, Yoshi hot on your tail.  \n keep running \n go around to alley.  ") 
+         
+         if(takeoff == "go around"){
+             var around = prompt(" As you dash behind a dumpster and into the alley, your panicked gaze lingers on a yellow pill on the street, silver moonlight flashing off its iridescent sheen. \n pick up pill \n face yoshi ")
+              
+             if(around = "pick up"){
+                 inventory.yellowpills += 1;
+                 var around = prompt("you feel braver now \n face yoshi");
+             }
+             
+            else if(around = "face yoshi"){
+                 if(inventory.yellowpills == 0){
+                     alert("Unfortunately, without a weapon to defend yourself, you quickly become yoshi's lunch")
+                     
+                 }
+                else if(inventory.yellowpills == 1){
+                    alert("You throw the pill and kill that jerk")
+                }
+             }
+         }
     }
    }
  

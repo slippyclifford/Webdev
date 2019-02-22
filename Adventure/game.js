@@ -1,8 +1,16 @@
 Game();
 function Game(){
 alert("Dr.Mario's silly clinic");
-var playername = prompt("What's your tag man");
-alert("Welcome to my silly virus clinic \n" +  playername);
+
+    var playername = prompt("What's your tag man");
+    
+   
+    while(!confirm("Is that really your tag man???")){
+  prompt("Then what is it my dude??????")
+    }
+alert("Welcome to my silly virus clinic \n" +  playername)
+    
+    
     var inventory = {
         yellowpills:0,
         redpills:0,
@@ -46,6 +54,7 @@ switch(room){
        
     case "approach":
         prompt("As the doctor meets your eyes, you freeze. His icy blue pupils contain a seemingly infinite expanse of knowledge frozen over by a cruel indifference to life and death. He lifts his gloved hand to reveal a Bloodred pill between his thumb and pointer finger \n- take pill \n - refuse");
+  
     case "take pill":
         alert("You cautiousy pluck the pill from the doc's rubber touch, raising it to your mouth as the sweet, salty taste of sweat trickles down your forhead. ")
        var take = prompt("Are you sure you want to do this?")
@@ -83,19 +92,24 @@ switch(room){
               
              if(around = "pick up"){
                  inventory.yellowpills += 1;
-                 var around = prompt("you feel braver now \n face yoshi");
+                 var around = alert("you feel braver now.");
              }
              
-            else if(around = "face yoshi"){
-                 if(inventory.yellowpills == 0){
-                     alert("Unfortunately, without a weapon to defend yourself, you quickly become yoshi's lunch")
-                     
-                 }
-                else if(inventory.yellowpills == 1){
-                    alert("You throw the pill and kill that jerk")
-                }
+             else if(around == "face yoshi"){
+                 alert("Unfortunately, without a weapon to defend yourself, you find yourdself  ")
+             }
+          while(inventory.yellowpills >= 1){
+              inventory.yellowpills -= 1;
+              alert("Using your newfound pill, you successfully choke that beast to death") ;
+          }
+            var death = prompt("Staring at the fallen corpse of this great emerald beast, a sudden pang of hunger overcomes you \n - eat \n - reject your urges");
+                
+             
              }
          }
+    funtion backyard(){
+        
     }
-   }
+    }
+   
  

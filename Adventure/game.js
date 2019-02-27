@@ -23,12 +23,16 @@ alert("Welcome to my silly virus clinic \n" +  playername)
     function Jar(){  var race = prompt("Your dismissal of the pill was not taken heartily by the doctor, as indicated by his nasty glare. He raises a hand to your throat and begins to squeeze  \n - break free").toLowerCase();
         
         if(race == "break free"){
-            var death = alert("Try as you might, you can't break free from the doctor's iron grip. His fist gets tighter and tighter, his quaint smile widening into a fiendish grin that seems to consume your fragile mind.  As your vision begins to fade, he leans in your ear and whispers \n It's a me, MARIO. ")
-            Clinic();
-        }
-                 while(inventory.redpills >= 1){
+            if(inventory.redpills >= 1){
               inventory.redpills -= 1;
-              alert("You manage to shove your red pill down his throat and escape") ;
+              alert("You manage to shove your red pill down his throat and begin running through the back door, hoping against hope that it leads to safety.") ;
+                 Virus();
+             }
+            
+            else if(inventory.redpills == 0){var death = alert("Try as you might, you can't break free from the doctor's iron grip. His fist gets tighter and tighter, his quaint smile widening into a fiendish grin that seems to consume your fragile mind.  As your vision begins to fade, he leans in your ear and whispers \n It's a me, MARIO. ")}
+            Clinic();
+        
+                
                   }
     
              
@@ -143,7 +147,20 @@ switch(room){
              }
          }
 
-    
+    function Virus(){
+        var fall = prompt("You burst through the back door, expecting to embrace the sunlight, as you fall through the non-existant floor and into a great, dark jar teeming with viruses. \n you land on a tower of multicolored pills in the center of this glass prison, gasping for air as you sink into the plastic sea. \n climb out \n sink further in").toLowerCase;
+       
+        switch(fall){
+                
+            case "climb":
+          var climb =  alert("You climbed");
+                break;
+                
+            case "sink":
+               var sink =  alert("You sunk");
+                break;
+        }
+    }
 }
     
    

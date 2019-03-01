@@ -60,7 +60,9 @@ switch(room){
          Clinic();
         }
         
-       
+        else if(decide == "stop look" || "stop"){
+          var stoplook = alert("you stop looking")
+            Clinic();
         
         }
       

@@ -10,12 +10,12 @@ alert("Dr.Mario's silly clinic");
     }
 alert("Welcome to my silly virus clinic \n" +  playername)
     
-    
+   var eaten = false;
     var inventory = {
         yellowpills:0,
         redpills:0,
         bluepills:0,
-        yoshiflesh:0,
+       
     }
     
     
@@ -48,6 +48,7 @@ switch(room){
         
         switch(decide){
             case "take pill":
+            case "take":
                 var taken = alert("You slyly swept the pill up from the floor and deposited it in the pocket of your jeans. ")
       inventory.redpills += 1;
            Clinic();
@@ -78,7 +79,7 @@ switch(room){
        
        
     case "approach":
-      var take =   prompt("As the doctor meets your eyes, you freeze. His icy blue pupils contain a seemingly infinite expanse of knowledge frozen over by a cruel indifference to life and death. He lifts his gloved hand to reveal a Bloodred pill between his thumb and pointer finger \n- grab pill \n - refuse");
+      var take = prompt("As the doctor meets your eyes, you freeze. His icy blue pupils contain a seemingly infinite expanse of knowledge frozen over by a cruel indifference to life and death. He lifts his gloved hand to reveal a Bloodred pill between his thumb and pointer finger \n- grab pill \n - refuse");
    if(take == "refuse"){
         alert("The insincts hidden in the deepest pits of terror lurking about the depths of your mind go on high alert when your gaze falls upon the forbidden object in his hand.");
        Jar();
@@ -86,9 +87,9 @@ switch(room){
     case "grab":
     case "grab pill":
         alert("You cautiousy pluck the pill from the doc's rubber touch, raising it to your mouth as the sweet, salty taste of sweat trickles down your forhead. ")
-       var take = prompt("Are you sure you want to do this?")
+       var take = confirm("Are you sure you want to do this?")
 
-    if(take == "yes"){
+    if(take){
         alert("You place the pill on your tounge, knowing full well that your doom is sealed as soon as your lips close.");
         Clinic();
         inventory.redpills = 0;
@@ -96,7 +97,7 @@ switch(room){
         inventory.bluepills = 0;
     }
        
-   else if(take == "no"){
+   else {
    var run = prompt("The second your pill hits the floor, you know that your doom is sealed. His eyes light up with a hellish rage as his mouth curls into a snarl so hideous god above would cower in fear. \n RUN");
        
        if(run == "run"){
@@ -121,24 +122,30 @@ switch(room){
          
         var takeoff = prompt("Your fight or flight instinct kicks in and you take off at a desperate sprint out of the building, Yoshi hot on your tail.  \n keep running \n go around to alley. "); 
        
-        if(takeoff == "keep running" || "run"){
+        if(takeoff == "keep running" || takeoff == "run"){
            var decide = prompt("Yoshi chases you down the street, and you worry that he will soon catch up. You see a great rusty dumpster on your left and a pile of boxes on your right. \n - climb boxes \n - hide in dumpster");
            
-           if(decide == "climb" || "climb boxes"){
+           if(decide == "climb" || decide == "climb boxes"){
                alert("You scramble up the splintered crates with the haste only shown by those whose lives are on the line. \n Unfortunately, it's not fast enough for Yoshi, and he casually snatches you with his jaws as if it were the easiest thing he's ever done..... . GAME OVER");
                Clinic();
            }
+            else if(decide == "hide" || decide == "hide in dumpster"){
+                alert("The putrid stench of garbage overpowers Yohsi's powerful scence of smell, and you successfully hide until he leaves. You get out and walk down the street. intent on celebrating your survival");
+                Street();
+            }
          }
-         else if(takeoff == "go around"){
-             var around = prompt(" As you dash behind a dumpster and into the alley, your panicked gaze lingers on a yellow pill on the street, silver moonlight flashing off its iridescent sheen. \n pick up pill \n face yoshi ")
+     else if(takeoff == "go around"){
+            
+                 var around = prompt(" As you dash behind a dumpster and into the alley, your panicked gaze lingers on a yellow pill on the street, silver moonlight flashing off its iridescent sheen. \n pick up pill \n face yoshi ");
               
              if(around == "pick up"){
                  inventory.yellowpills += 1;
                  var around = alert("you feel braver now.");
              }
+     }
              
-             else if(around == "face yoshi"){
-                 alert("Unfortunately, without a weapon to defend yourself, you make a quick lunch for Yoshi" )
+              if(around == "face yoshi"){
+                 alert("Unfortunately, without a weapon to defend yourself, you make a quick lunch for Yoshi" );
                  Clinic();
              }
           while(inventory.yellowpills >= 1){
@@ -148,12 +155,12 @@ switch(room){
             var death = prompt("Staring at the fallen corpse of this great emerald beast, a sudden pang of hunger overcomes you \n - eat \n - reject your urges");
                 
              if(death == "eat"){
-                 var eat = alert("You engore yourself off the flesh of Yoshi, and finding yourself suitably fed, wander off down the street, intent on celebrating your survival");
-                 inventory.yoshiflesh += 1;
+                 var eat = alert("You engore yourself on the flesh of Yoshi, and finding yourself suitably fed, wander off down the street, intent on celebrating your survival");
+                 eaten = true;
                  Street();
              }
              
-             }
+             
         else{
             alert("Dr. Mario hated that");
             Outside;
@@ -175,7 +182,10 @@ switch(room){
                switch(sink){
                    case "switch red with yellow":
                    case "switch red with blue":
-                       alert("you burst out of the jar, gasping for breath");
+                   
+                       alert("The combination of pills creates an explosive chemical reaction that bursts through the jar! Golden sunlight shines through a broken section of wall, and you crawl to freedom. As you leave, you notice a particularly juicy pill lying on the pavement. \n Eat it? ");
+                     
+                     
                        break;
                }
                break;
@@ -189,6 +199,17 @@ switch(room){
     
 
     function Street(){
-        alert("You walk down the street");
+       alert("You walk down the street, simply happy to have escaped that nightmare with your life.");
+       alert("you walk");
+        alert("You walk");
+        alert("you walk");
+        var walk = prompt("The road shows no sign of stopping, and you begin to grow concerned. Also, hungry \n - Take a nap \n - continue on");
+        
+        if(walk == "nap" || "take a nap"){
+            if(eaten == true){
+                alert("Using the extra energy gained from your snack, you are able to power ");
+            }
+        }
+       
     }
 }

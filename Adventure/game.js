@@ -60,9 +60,7 @@ switch(room){
          Clinic();
         }
         
-        else if(decide == "stop look" || "stop"){
-          var stoplook = alert("you stop looking")
-            Clinic();
+       
         
         }
       
@@ -130,8 +128,15 @@ switch(room){
                Clinic();
            }
             else if(decide == "hide" || decide == "hide in dumpster"){
-                alert("The putrid stench of garbage overpowers Yohsi's powerful scence of smell, and you successfully hide until he leaves. You get out and walk down the street. intent on celebrating your survival");
+               var tower = prompt("The putrid stench of garbage overpowers Yohsi's powerful scence of smell, and you successfully hide until he leaves. You get out and begin to walk, but notice a particularly juicy looking piece of garbage pizza near the dumpster. \n eat it? \n pass?");
                 Street();
+                
+                if(tower == "eat" || tower == "eat it"){
+                    alert("You snarf down the pizza and, feeling incredible, walk down the street.");
+                    eaten = true;
+                    Street();
+                }
+           
             }
          }
      else if(takeoff == "go around"){
@@ -183,15 +188,23 @@ switch(room){
                    case "switch red with yellow":
                    case "switch red with blue":
                    
-                       alert("The combination of pills creates an explosive chemical reaction that bursts through the jar! Golden sunlight shines through a broken section of wall, and you crawl to freedom. As you leave, you notice a particularly juicy pill lying on the pavement. \n Eat it? ");
+                       var game = prompt("The combination of pills creates an explosive chemical reaction that bursts through the jar! Golden sunlight shines through a broken section of wall, and you crawl to freedom. As you leave, you notice a particularly juicy pill lying on the pavement. \n eat it? \n pass ");
                      
-                     
+                       if(game == "eat" || game == "eat it"){
+                           alert("You down the pill in a flash, and feeling refreshed, you walk down the street.");
+                           eaten = true;
+                           Street;
+                       }
+                     else if(game == "pass" || game == "no"){
+                         alert("You decided it best to not eat strange medical equipment off the ground.");
+                         Street();
+                     }
                        break;
                }
                break;
        
            default:
-            alert("Dr.Mario hated that");
+            alert("Your oxygen runs out as your vision grows blurry. You disappear under the waves of plastic...... GAME OVER");
                Virus();
                break;
        }
@@ -205,10 +218,18 @@ switch(room){
         alert("you walk");
         var walk = prompt("The road shows no sign of stopping, and you begin to grow concerned. Also, hungry \n - Take a nap \n - continue on");
         
-        if(walk == "nap" || "take a nap"){
+        if(walk == "continue" || walk == "continue on"){
             if(eaten == true){
-                alert("Using the extra energy gained from your snack, you are able to power ");
+                alert("Using the extra energy gained from your snack, you are able to power through the arduous trek without starving to death. After what seems like days, you arrive at a lonely gas station, complete with food and a telephone. A traveling theater troupe offers to take you home on their bus. The nightmare is finally over. YOU WIN");
+                Clinic();
             }
+            else if(eaten == false){
+                alert("You walk with all the energy available to you, but to no avail. The road continues into eternity as you fall down and die.... GAME OVER")
+                Clinic();
+            }
+        }
+        else if(walk == "nap" || walk == "take a nap"){
+        alert("The exhaustion of the night's activities overcome you, as you fall to the ground like a sack of potatoes. You never wake up......... GAME OVER");
         }
        
     }

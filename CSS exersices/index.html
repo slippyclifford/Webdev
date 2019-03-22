@@ -25,6 +25,17 @@
             font-size:5em
                 
         }
+        
+        @keyframes change {
+            from{background-color: fuchsia;}
+            to{background-color: aquamarine;}  
+        }
+        
+        @keyframes otherchange {
+            from{background-color: aquamarine;}
+            to{background-color: fuchsia;}
+        }
+       
         div#square{
             background-color: fuchsia;
             width:100px;
@@ -33,6 +44,8 @@
             position:absolute;
             left: 1px;
             top:140px;
+            animation-name: change;
+            animation-duration: 4s;
         }
         div#circle{
             background-color: aquamarine;
@@ -43,12 +56,15 @@
             left:150px;
             top:140px;
             border:Outset 10px fuchsia;
+             animation-name: otherchange;
+            animation-duration: 4s;
         }
         div#square2{
             background-color: fuchsia;
             width:100px;
             height:100px;
-            
+            animation-name: change;
+            animation-duration: 4s;
             position: absolute;
             left:300px;
             top:140px;
@@ -63,12 +79,15 @@
             left:450px;
             top:140px;
             border:Outset 10px fuchsia;
+             animation-name: otherchange;
+            animation-duration: 4s;
         }
          div#square3{
             background-color: fuchsia;
             width:100px;
             height:100px;
-            
+            animation-name: change;
+            animation-duration: 4s;
             position: absolute;
             left:600px;
             top:140px;
@@ -83,6 +102,8 @@
             left:750px;
             top:140px;
             border:Outset 10px fuchsia;
+             animation-name: otherchange;
+            animation-duration: 4s;
         }
          div#circle4{
             background-color: aquamarine;
@@ -93,12 +114,15 @@
             left:1050px;
             top:140px;
             border:Outset 10px fuchsia;
+             animation-name: otherchange;
+            animation-duration: 4s;
         }
          div#square4{
             background-color: fuchsia;
             width:100px;
             height:100px;
-            
+            animation-name: change;
+            animation-duration: 4s;
             position: absolute;
             left:900px;
             top:140px;
@@ -112,6 +136,8 @@
             position:absolute;
             left: 1px;
             top:480px;
+             animation-name: otherchange;
+            animation-duration: 4s;
         }
         div#circle5{
             background-color: fuchsia;
@@ -122,12 +148,15 @@
             left:150px;
             top:480px;
             border:Outset 10px aquamarine;
+            animation-name: change;
+            animation-duration: 4s;
         }
         div#square6{
             background-color: aquamarine;
             width:100px;
             height:100px;
-            
+            animation-name: otherchange;
+            animation-duration: 4s;
             position: absolute;
             left:300px;
             top:480px;
@@ -142,12 +171,15 @@
             left:450px;
             top:480px;
             border:Outset 10px aquamarine;
+             animation-name: change;
+            animation-duration: 4s;
         }
          div#square7{
             background-color: aquamarine;
             width:100px;
             height:100px;
-            
+            animation-name: otherchange;
+            animation-duration: 4s;
             position: absolute;
             left:600px;
             top:480px;
@@ -162,12 +194,15 @@
             left:750px;
             top:480px;
             border:Outset 10px aquamarine;
+              animation-name: change;
+            animation-duration: 4s;
         }
          div#square8{
             background-color:aquamarine;
             width:100px;
             height:100px;
-            
+            animation-name: otherchange;
+            animation-duration: 4s;
             position: absolute;
             left:900px;
             top:480px;
@@ -182,9 +217,33 @@
             left:1050px;
             top:480px;
             border:Outset 10px aquamarine;
+             animation-name: change;
+            animation-duration: 4s;
         }
-       
         
+        img#luffy{
+            display: block;
+           
+            position:absolute;
+            z-index:1;
+            
+                top:800px;
+            width: 400px;
+            height: 400px;
+                
+        }
+        img#hatcher{
+            display: block;
+            border-radius:15%;
+            border:solid 10px aquamarine;
+            position:absolute;
+            z-index:1;
+            left:700px;
+                top:800px;
+            width: 400px;
+            height: 400px;
+                
+        }
     </style>
     </head>
 <body>
@@ -209,8 +268,9 @@
     <div id="square8"></div>
     <div id="circle8"></div>
     <div id="Triangle"></div>
-    
- 
+    <img src="Bhatch.png" id="hatcher">
+ <img src="one_piece_luffy.png" id="luffy">
+ <div id="triangle"></div>
     
     </body>
     

@@ -16,3 +16,36 @@ div#container{
 	height:800px;
 	background-color: floralwhite
 }
+header{
+	width:96%;
+	padding:25px;
+	background-color:aquamarine;
+}
+
+header h1{
+	color:cadetblue;
+	font-family:'Monoton', sans-serif;
+	font-size:200%;
+}
+div#content{
+	width:100%;
+	background-color:cadetblue;
+
+	
+}
+nav{
+	width:100%;
+		background-color:darkgrey;
+}
+nav ol{
+	margin:auto;
+	display: block;
+	font-size: 1.1em;
+}
+nav ul li{
+	float:left;
+	padding:5px 10px;
+}
+.keepopen{
+	clear:both;
+}

@@ -21,11 +21,18 @@ header{
 	padding:25px;
 	background-color:aquamarine;
 }
-
+header img#applogo{
+	display: block;
+	margin:auto;
+	width:200px;
+	width:200px;
+}
 header h1{
 	color:cadetblue;
 	font-family:'Monoton', sans-serif;
 	font-size:200%;
+	margin:auto;
+	text-align: center;
 }
 div#content{
 	width:100%;

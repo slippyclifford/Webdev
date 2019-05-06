@@ -9,11 +9,11 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,header,footer,nav{
 /* universal Stlye */
 
 body{
-	background-color:palevioletred;
+	background-color:cadetblue;
 }
 div#container{
 	width:100%;
-	background-color: lightskyblue;
+	background-color: aquamarine;
 		border:5px solid black;
 }
 header{
@@ -57,13 +57,14 @@ div#content{
 	transition: all 0.3s ease;
 	color: lightseagreen;
 	font-size: 36px;
+	background: black;
 	
 }
 .icon-bar a:hover{
-	background-color:black;
+	background-color:aquamarine;
 }
 .active{
-	background-color:antiquewhite;
+	
 }
 /*
 nav{

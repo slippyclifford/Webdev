@@ -51,11 +51,11 @@ div#content{
 }
 
 .icon-bar{
-	position:absolute;
+	position:fixed;
 	bottom:0;
 	left:0;
 	width: 100%;
-	background color:black;
+	background color:cadetblue;
 	overflow:auto;
 }
 .icon-bar a{
@@ -74,6 +74,43 @@ div#content{
 }
 .active{
 	
+}
+div#productgroup{
+	max-width:80%;
+	min-width:20%;
+	margin:auto;
+}
+figure.cows{
+
+	float:left;
+	
+	min-width: 30%;
+		max-width:50%;
+	background color:palegreen;
+	border-radius:5%;
+	color:aquamarine;
+}
+figure.othercow{
+	
+	float:right;
+	margin:10px;
+	min-width: 30%;
+		max-width:50%;
+	background color:palegreen;
+	border-radius:5%;
+	color:aquamarine;
+	width:50px;
+	height:50px;
+}
+figure.lastcow{
+	
+	float:left;
+	margin:10px;
+	min-width: 30%;
+		max-width:50%;
+	background color:palegreen;
+	border-radius:5%;
+	color:aquamarine;
 }
 /*
 nav{

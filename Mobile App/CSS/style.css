@@ -112,6 +112,14 @@ figure.lastcow{
 	border-radius:5%;
 	color:aquamarine;
 }
+figure.priest{
+	float:right;
+	margin:10px;
+	min-width:30%;
+		max-width:50%;
+	background-color:green;
+	size:200px;
+}
 /*
 nav{
 	width:100%;
